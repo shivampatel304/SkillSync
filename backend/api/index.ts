@@ -63,3 +63,5 @@ app.post('/login', async (req, res): Promise<any> => {
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });
+
+module.exports = app

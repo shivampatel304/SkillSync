@@ -46,3 +46,10 @@ Thumbs.db
 
 # Other
 coverage/
+
+.vercel
+
+.env*
+.flaskenv*
+!.env.project
+!.env.vault
