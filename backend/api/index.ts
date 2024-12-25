@@ -17,6 +17,12 @@ app.get('/home', (req, res) => {
   res.status(200).json('Welcome, your app is working well');
 })
 
+app.post('/in', async(req,res) => {
+  const {name} = req.body;
+
+  res.status(200).json(name);
+})
+
 
 app.post('/signup', async(req, res): Promise<any> =>{
   try{
