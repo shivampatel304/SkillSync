@@ -13,6 +13,10 @@ const secret = process.env.JWT_SECRET || "fallbackSecret";
 app.use(express.json());
 // app.use("/auth", authRoutes);
 
+app.get('/home', (req, res) => {
+  res.status(200).json('Welcome, your app is working well');
+})
+
 
 app.post('/signup', async(req, res): Promise<any> =>{
   try{

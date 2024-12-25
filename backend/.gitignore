@@ -14,7 +14,7 @@ lerna-debug.log*
 .pnpm-debug.log*
 
 # Build
-dist/
+
 build/
 
 # Dependency directories
