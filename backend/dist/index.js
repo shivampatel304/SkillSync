@@ -23,17 +23,10 @@ const app = (0, express_1.default)();
 const PORT = process.env.PORT || 3000;
 const secret = process.env.JWT_SECRET || "fallbackSecret";
 app.use(express_1.default.json());
-// app.use("/auth", authRoutes);
-app.get('/home', (req, res) => {
-    res.status(200).json('Welcome, your app is working well');
-});
-app.post('/in', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    const { name } = req.body;
-    res.status(200).json(name);
-}));
 app.post('/signup', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         const { email, password, name } = req.body;
+        console.log(email);
         const existingUser = yield prisma.user.findUnique({ where: { email } });
         if (existingUser) {
             return res.status(400).json({ message: 'User already exists' });
